@@ -5,7 +5,7 @@ More data types may be supported by implementing the IProcessor interface in the
 ##########
 # TO RUN #
 ##########
-pip install -r requirements
+pip install -r requirements.txt
 $ ./data_file_converter.py
 usage: data_file_converter.py [-h] 
                               --in-file IN_FILE 
