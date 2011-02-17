@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<school xmlns="http://www.example.com/example.xsd">
+  <grade id="2">
+    <classroom id="101" name="Mrs. Jones' Math Class">
+      <teacher first_name="Barbara" last_name="Jones" id="10100000001"/>
+      <student first_name="Michael" last_name="Gil" id="10100000010"/>
+      <student first_name="Kimberly" last_name="Gutierrez" id="10100000011"/>
+    </classroom>
+  </grade>
+  <grade id="1">
+    <classroom id="101" name="Mrs. Jones' Math Class">
+      <teacher first_name="Barbara" last_name="Jones" id="10100000001"/>
+      <student first_name="Toby" last_name="Mercado" id="10100000013"/>
+      <student first_name="Lizzie" last_name="Garcia" id="10100000014"/>
+      <student first_name="Alex" last_name="Cruz" id="10100000015"/>
+    </classroom>
+    <classroom id="102" name="Mr. Smith's PhysEd Class">
+      <teacher first_name="John" last_name="Patterson" id="10200000011"/>
+      <teacher first_name="Arthur" last_name="Smith" id="10200000001"/>
+      <student first_name="Nathaniel" last_name="Smith" id="10200000010"/>
+      <student first_name="Brandon" last_name="McCrancy" id="10200000011"/>
+      <student first_name="Elizabeth" last_name="Marco" id="10200000012"/>
+      <student first_name="Erica" last_name="Lanni" id="10200000013"/>
+      <student first_name="Michael" last_name="Flores" id="10200000014"/>
+      <student first_name="Jasmin" last_name="Hill" id="10200000015"/>
+      <student first_name="Brittany" last_name="Perez" id="10200000016"/>
+      <student first_name="William" last_name="Hiram" id="10200000017"/>
+      <student first_name="Alexis" last_name="Reginald" id="10200000018"/>
+      <student first_name="Matthew" last_name="Gayle" id="10200000019"/>
+    </classroom>
+  </grade>
+  <grade id="">
+    <classroom id="103" name="Brian's Homeroom">
+      <teacher first_name="Brian" last_name="O'Donnell" id="10300000001"/>
+    </classroom>
+  </grade>
+</school>

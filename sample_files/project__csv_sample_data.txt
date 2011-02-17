@@ -1,0 +1,17 @@
+101, Mrs. Jones' Math Class, 10100000001, Jones, Barbara, , , , 10100000010, Gil, Michael, 2
+101, Mrs. Jones' Math Class, 10100000001, Jones, Barbara, , , , 10100000011, Gutierrez, Kimberly, 2  
+101, Mrs. Jones' Math Class, 10100000001, Jones, Barbara, , , , 10100000013, Mercado, Toby, 1      
+101, Mrs. Jones' Math Class, 10100000001, Jones, Barbara, , , , 10100000014, Garcia, Lizzie, 1    
+101, Mrs. Jones' Math Class, 10100000001, Jones, Barbara, , , , 10100000015, Cruz, Alex, 1      
+102, Mr. Smith's PhysEd Class, 10200000001, Smith, Arthur, 10200000011, Patterson, John, 10200000010, Smith, Nathaniel, 1 
+102, Mr. Smith's PhysEd Class, 10200000001, Smith, Arthur, 10200000011, Patterson, John, 10200000011, McCrancy, Brandon, 1
+102, Mr. Smith's PhysEd Class, 10200000001, Smith, Arthur, 10200000011, Patterson, John, 10200000012, Marco, Elizabeth, 1
+102, Mr. Smith's PhysEd Class, 10200000001, Smith, Arthur, 10200000011, Patterson, John, 10200000013, Lanni, Erica, 1
+102, Mr. Smith's PhysEd Class, 10200000001, Smith, Arthur, 10200000011, Patterson, John, 10200000014, Flores, Michael, 1
+102, Mr. Smith's PhysEd Class, 10200000001, Smith, Arthur, 10200000011, Patterson, John, 10200000015, Hill, Jasmin, 1
+102, Mr. Smith's PhysEd Class, 10200000001, Smith, Arthur, 10200000011, Patterson, John, 10200000016, Perez, Brittany, 1  
+102, Mr. Smith's PhysEd Class, 10200000001, Smith, Arthur, 10200000011, Patterson, John, 10200000017, Hiram, William, 1
+102, Mr. Smith's PhysEd Class, 10200000001, Smith, Arthur, 10200000011, Patterson, John, 10200000018, Reginald, Alexis, 1
+102, Mr. Smith's PhysEd Class, 10200000001, Smith, Arthur, 10200000011, Patterson, John, 10200000019, Gayle, Matthew, 1
+103, Brian's Homeroom, 10300000001, O'Donnell, Brian, , , , , , ,
+

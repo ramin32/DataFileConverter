@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/example.xsd"
+        xmlns:example="http://www.example.com/example.xsd"
+        elementFormDefault="qualified">
+
+    <!-- a primary id is a positive number with 1-11 digits -->
+    <simpleType name="primary_id">
+        <restriction base="nonNegativeInteger">
+            <pattern value="[0-9]{1,11}"/>
+        </restriction>
+    </simpleType>
+
+
+    <!-- students and teachers both have this type -->
+    <complexType name="person">
+        <attribute name="id" type="example:primary_id" use="required"/>
+        <attribute name="first_name" type="string" use="required"/>
+        <attribute name="last_name" type="string" use="required"/>
+    </complexType>
+     
+
+
+    <!-- the school type contains 0-13 grades and has attributes id and name -->
+    <element name="school">
+        <complexType>
+            <sequence>
+                <element ref="example:grade" minOccurs="0" maxOccurs="13"/>
+            </sequence>
+
+            <attribute name="id" type="example:primary_id" use="required"/>
+            <attribute name="name" type="string" use="required"/>
+        </complexType>
+    </element>
+
+
+    <!-- the grade type contains 0-N classrooms, and has attribute name -->
+    <element name="grade">
+        <complexType>
+            <sequence>
+                <element ref="example:classroom" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+
+            <attribute name="id" type="example:primary_id" use="required"/>
+        </complexType>
+    </element>
+
+
+    <!-- the classroom type contains 1-N teachers followed by 0-N students,
+         and has attributes id and name -->
+    <element name="classroom">
+        <complexType>
+            <sequence>
+                <element name="teacher" type="example:person" minOccurs="1" maxOccurs="unbounded"/> 
+                <element name="student" type="example:person" minOccurs="0" maxOccurs="unbounded"/> 
+            </sequence>
+
+            <attribute name="id" type="example:primary_id" use="required"/>
+            <attribute name="name" type="string" use="required"/>
+        </complexType>
+    </element>
+
+
+</schema>

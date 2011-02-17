@@ -1,0 +1,13 @@
+csv:
+    mapping:
+        classroom id: classroom_id
+        student_grade: grade_id
+
+    shareable_siblings: teacher 
+
+hierachy: 
+    school:
+        grade:
+            classroom:
+                teacher:
+                student: 

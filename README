@@ -1,0 +1,74 @@
+DataFileConverter:
+Converts data files such as xml to csv and vice versa.
+More data types may be supported by implementing the IProcessor interface in the converter.processor package.
+
+##########
+# TO RUN #
+##########
+pip install -r requirements
+$ ./data_file_converter.py
+usage: data_file_converter.py [-h] 
+                              --in-file IN_FILE 
+                              --out-file OUT_FILE
+                              --in-format-file IN_FORMAT_FILE
+                              --out-format-file OUT_FORMAT_FILE
+                              --in-format-type IN_FORMAT_TYPE
+                              --out-format-type OUT_FORMAT_TYPE 
+                              --config-file CONFIG_FILE
+
+Examples may be run by running:
+./run_example.sh
+
+
+A config.yaml file is used to specify configurations.
+
+Some test cases have been provided and can be run with the 'run_all_tests.py' script.
+################
+# Design Notes #
+################
+
+I have opted to use Python as the language becuase of its simplicity and brevity. 
+Python also has a nice xml parsing library (lxml) that uses effecient standard C xml parsing libraries. 
+
+etree.Element will represent the data hierachy across all formats. I found this to be a nice encapsulation of a Node with attributes so I didn't need to implement my own Node implementation. Another plus is that it natively processes xml from and to files.
+
+
+A IProcessor interface is used to load format files, parse from files and write to files.
+A Converter class uses IProcessor instances to convert from and to files.
+The processor_util module has a factory-like method 'create_processor' which creates instance of processors based on a string representing the appropriate IProcessor implementation (processor_util.XXX_ID).
+
+For incompatible entry fields a property file is introduced to map fields from one type to another (grade_id: student_grade, customer id: customer_id). 
+
+Shareable fields (teacher_1_XXX) are assumed to be leaf nodes within the xml structure and must be specified in the yaml file.
+
+I have decided to use YAML config files to specify any inconsistencies found between differnt formats. yaml is easy to work with and is descriptive as well which was what I needed. This yaml file can also be utilized any future format types.
+
+Instead of parsing the xml schema for the hierachy I have decided to specify the hierachy in the yaml config file. This method does not require any messy xml parsing to generate the hierachy on the fly.
+
+Instead of passing file string to methods I opted to use file objects instead because python lets you create file objects from strings (StringIO) which are great for testing and do not require you to load any files from the system.
+
+
+Converting Csv files to Xml files works as follows:
+The hierachy is loaded from the yaml file.
+For each node in the yaml file create sublists of the csv file for each unique set that matches.
+Do this recursively while appending the sublist to the current node.
+
+
+Xml to Csv conversion works as follows:
+
+
+##############################
+# Assumptions/Specifications #
+##############################
+
+A config file (YAML format) must be provided to specify mapping between formats, the hierachy, and any leaf nodes that will be shared with siblings in the csv. Since XML is assumed to be properly defined xml configurations maybe left out.
+
+Shareable entries MUST specify an index between the node name and its attribute!
+
+All fields must be converted to the XML format which is assumed to be properly defined.
+Input/output csv files do not have a header line.
+All fields in the csv file are grouped by the following prefix: 'name_'. No two field groups may have the same prefix since they are assumed to be in the same field type.
+
+Output xml cannot be validated with the schema file since parent nodes may not have been specified.
+
+

@@ -1,0 +1,3 @@
+classroom id, classroom_name, teacher_1_id, teacher_1_last_name, teacher_1_first_name, teacher_2_id, teacher_2_last_name, teacher_2_first_name, student_id, student_last_name, student_first_name, student_grade
+
+
